@@ -8,7 +8,7 @@ use Illuminate\Validation\Rule;
 use App\Models\Ticket;
 use Illuminate\Support\Facades\Validator;
 
-class ArticleController extends Controller
+class TicketController extends Controller
 {
     //method utk tampil semua
     public function index() {
