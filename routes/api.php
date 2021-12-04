@@ -18,7 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::get('ticket', 'Api\TicketController@index');
 Route::get('ticket/{user}', 'Api\TicketController@indexOneUser');   
 Route::get('ticket/{id}', 'Api\TicketController@show');
