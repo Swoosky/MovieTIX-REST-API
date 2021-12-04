@@ -20,7 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('ticket', [TicketController::class, 'index']);
-Route::get('ticket/{user}', [TicketController::class, 'indexOneUser']);   
 Route::get('ticket/{id}', [TicketController::class, 'show']);
 Route::post('ticket', [TicketController::class, 'store']);
 Route::put('ticket/{id}', [TicketController::class, 'update']);

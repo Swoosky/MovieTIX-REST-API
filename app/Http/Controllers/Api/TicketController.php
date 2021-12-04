@@ -42,14 +42,13 @@ class TicketController extends Controller
             'message' => 'Empty',
             'data' => null
         ], 400);
-
     }
 
     //method utk tampil 1
     public function show($id) {
         $ticket = Ticket::find($id); //mengambil 1
         
-        if(!is_null($ticket)    ) {
+        if(!is_null($ticket)) {
             return response([
                 'message' => 'Retrieve Ticket success!',
                 'data' => $ticket
