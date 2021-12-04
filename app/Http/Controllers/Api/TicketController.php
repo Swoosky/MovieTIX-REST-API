@@ -33,13 +33,13 @@ class TicketController extends Controller
         
         if(count($tickets) > 0) {
             return response([
-                'message' => 'Retrieve all success!',
+                'message' => 'Retrieve searched success!',
                 'ticket' => $tickets
             ], 200);
         }
 
         return response([
-            'message' => 'Empty',
+            'message' => 'User not found',
             'ticket' => null
         ], 400);
     }
