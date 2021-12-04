@@ -25,7 +25,7 @@ class TicketController extends Controller
             'message' => 'Empty',
             'data' => null
         ], 400);
-
+        //
     }
     
     //method utk tampil semua untuk satu user
