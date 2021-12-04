@@ -16,13 +16,13 @@ class TicketController extends Controller
         if(count($tickets) > 0) {
             return response([
                 'message' => 'Retrieve all success!',
-                'data' => $tickets
+                'ticket' => $tickets
             ], 200);
         }
 
         return response([
             'message' => 'Empty',
-            'data' => null
+            'ticket' => null
         ], 400);
         //
     }
@@ -34,13 +34,13 @@ class TicketController extends Controller
         if(count($tickets) > 0) {
             return response([
                 'message' => 'Retrieve all success!',
-                'data' => $tickets
+                'ticket' => $tickets
             ], 200);
         }
 
         return response([
             'message' => 'Empty',
-            'data' => null
+            'ticket' => null
         ], 400);
     }
 
@@ -51,13 +51,13 @@ class TicketController extends Controller
         if(!is_null($ticket)) {
             return response([
                 'message' => 'Retrieve Ticket success!',
-                'data' => $ticket
+                'ticket' => $ticket
             ], 200); //return success
         }
 
         return response([
             'message' => 'Ticket not found',
-            'data' => null
+            'ticket' => null
         ], 400); //return tidak ketemu
 
     }
@@ -84,7 +84,7 @@ class TicketController extends Controller
         $ticket = Ticket::create($storeData);
         return response([
             'message' => 'Add Ticket success!',
-            'data' => $ticket
+            'ticket' => $ticket
         ], 200); //membuat course baru
     }
 
@@ -95,20 +95,20 @@ class TicketController extends Controller
         if(is_null($ticket)) {
             return response([
                 'message' => 'Ticket not found',
-                'data' => null
+                'ticket' => null
             ], 404); //return tidak ditemukan
         }
         
         if($ticket->delete()) {
             return response([
                 'message' => 'Delete Ticket success!',
-                'data' => $ticket
+                'ticket' => $ticket
             ], 200); //return tidak ditemukan
         }
 
         return response([
             'message' => 'Delete Ticket failed',
-            'data' => null
+            'ticket' => null
         ],400); //return gagal hapus
     }
 
@@ -119,7 +119,7 @@ class TicketController extends Controller
         if(is_null($ticket)) {
             return response([
                 'message' => 'Ticket not found',
-                'data' => null
+                'ticket' => null
             ], 404); //return tidak ditemukan
         }
 
@@ -151,13 +151,13 @@ class TicketController extends Controller
         if($ticket->save()) {
             return response([
                 'message' => 'Update Ticket Success!',
-                'data' => $ticket
+                'ticket' => $ticket
             ], 200);
         } //return data yang diedit dlm json
 
         return response([
             'message' => 'Update Ticket Failed',
-            'data' => null
+            'ticket' => null
         ], 400);
         
     }
