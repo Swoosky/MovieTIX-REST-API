@@ -15,6 +15,13 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->string('user');
+            $table->string('judul');
+            $table->string('tempat');
+            $table->string('tanggal');
+            $table->string('waktu');
+            $table->string('jenis');
+            $table->integer('total');
             $table->timestamps();
         });
     }
