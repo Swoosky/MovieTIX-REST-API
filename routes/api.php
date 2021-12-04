@@ -18,9 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('ticket', 'Api\Ticket2Controller@index');
-Route::get('ticket/{user}', 'Api\Ticket2Controller@indexOneUser');   
-Route::get('ticket/{id}', 'Api\Ticket2Controller@show');
-Route::post('ticket', 'Api\Ticket2Controller@store');
-Route::put('ticket/{id}', 'Api\Ticket2Controller@update');
-Route::delete('ticket/{id}', 'Api\Ticket2Controller@destroy');
+Route::get('ticket', 'app\Http\Controllers\Api\TicketController@index');
+Route::get('ticket/{user}', 'app\Http\Controllers\Api\TicketController@indexOneUser');   
+Route::get('ticket/{id}', 'app\Http\Controllers\Api\TicketController@show');
+Route::post('ticket', 'app\Http\Controllers\Api\TicketController@store');
+Route::put('ticket/{id}', 'app\Http\Controllers\Api\TicketController@update');
+Route::delete('ticket/{id}', 'app\Http\Controllers\Api\TicketController@destroy');
